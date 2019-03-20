@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "node-auth-pass-local",
   "version": "1.0.0",
-  "description": "",
+  "description": "node.js authentication app",
   "main": "index.js",
   "engines": {
     "node": "8.1.1",
@@ -9,15 +9,33 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^4.1.0",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "mongodb": "^3.1.13",
     "mongoose": "^5.4.19",
     "nodemon": "^1.18.10",
     "passport": "^0.4.0",
-    "passport-google-oauth20": "^2.0.0"
-  }
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ed4354/Emaily.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ed4354/Emaily/issues"
+  },
+  "homepage": "https://github.com/ed4354/Emaily#readme",
+  "keywords": []
 }
